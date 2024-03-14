@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1057654108027",
+    "project_id": "strongfitapp-9969c",
+    "storage_bucket": "strongfitapp-9969c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1057654108027:android:8b8adfbdcf4b46e5b1d7de",
+        "android_client_info": {
+          "package_name": "com.example.strongfit"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDI9phDV6_BPJunkn2Y7fsgdqfvrQxYYEo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
