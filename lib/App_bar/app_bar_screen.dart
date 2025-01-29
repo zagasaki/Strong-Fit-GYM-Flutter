@@ -18,7 +18,7 @@ class AppBarScreen extends StatefulWidget implements PreferredSizeWidget {
 class _AppBarScreenState extends State<AppBarScreen> {
   String temperature = '';
   String city = '';
-  late DateTime selectedDate; // Tambahkan variabel selectedDate
+  late DateTime selectedDate;
   DateTime sekarang = DateTime.now();
 
   @override

@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:basic/Component/notification.dart';
+// import 'package:basic/Component/notification.dart';
 
 class Seller extends StatefulWidget {
   const Seller({
@@ -27,7 +27,7 @@ class _SellerState extends State<Seller> {
   final TextEditingController _deskripsi = TextEditingController();
   List<EventModel> details = [];
   bool _isLoading = false;
-  final notifikasi = Notifikasi();
+  // final notifikasi = Notifikasi();
 
   Future<void> _checkPermission(ImageSource source) async {
     PermissionStatus status;
@@ -155,8 +155,8 @@ class _SellerState extends State<Seller> {
       _jenissuplemen.clear();
       _deskripsi.clear();
 
-      notifikasi.showPesanNotif(
-          'Item Sold', 'Your item has been sold successfully!');
+      // notifikasi.showPesanNotif(
+      //     'Item Sold', 'Your item has been sold successfully!');
 
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
