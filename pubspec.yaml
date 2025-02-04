@@ -41,24 +41,24 @@ dependencies:
   http: ^1.1.0
   sqflite: ^2.3.0
   shared_preferences: ^2.2.2
-  flutter_slider_drawer: ^2.1.3
+  flutter_slider_drawer: ^3.0.2
   path_provider: ^2.1.1
-  firebase_analytics: ^10.6.2
-  firebase_core: ^2.20.0
-  firebase_auth: ^4.12.1
-  flutter_login: ^4.2.1
+  firebase_analytics: ^11.4.1
+  firebase_core: ^3.10.1
+  firebase_auth: ^5.4.1
+  flutter_login: ^5.0.0
   font_awesome_flutter: ^10.6.0
   fluttertoast: ^8.2.4
   dio: ^5.3.3
-  cloud_firestore: ^4.13.1
+  cloud_firestore: ^5.6.2
   fab_circular_menu_plus: ^0.0.1
-  firebase_storage: ^11.5.1
+  firebase_storage: ^12.4.1
   image_picker: ^1.0.4
   permission_handler: ^11.1.0
-  google_mobile_ads: ^4.0.0
+  google_mobile_ads: ^5.3.1
   flutter_localizations:
     sdk: flutter
-  localization: 2.1.0
+  localization: ^2.1.1
   flutter_background_service: ^5.0.5
   flutter_rating_bar: ^4.0.0
 
@@ -71,7 +71,7 @@ dev_dependencies:
   # activated in the `analysis_options.yaml` file located at the root of your
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
-  flutter_lints: ^2.0.0
+  flutter_lints: ^5.0.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
