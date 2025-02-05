@@ -8,7 +8,7 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 
 class SuplemenPage extends StatefulWidget {
-  const SuplemenPage({Key? key}) : super(key: key);
+  const SuplemenPage({super.key});
 
   @override
   State<SuplemenPage> createState() => _SuplemenPageState();
@@ -26,6 +26,7 @@ class _SuplemenPageState extends State<SuplemenPage>
     super.initState();
   }
 
+//Fungsi untuk membaca data product dari firestore
   Future readData() async {
     await Firebase.initializeApp();
     FirebaseFirestore db = FirebaseFirestore.instance;
@@ -37,6 +38,7 @@ class _SuplemenPageState extends State<SuplemenPage>
     });
   }
 
+//Fungsi filter pada widget search
   void filterSuplemen(String query) {
     setState(() {
       filteredSuplemenList = details
@@ -112,9 +114,7 @@ class _SuplemenPageState extends State<SuplemenPage>
                     ),
                   ),
                 ),
-                SizedBox(
-                    width: screenWidth *
-                        0.02), // Add spacing between the TextField and buttons
+                SizedBox(width: screenWidth * 0.02),
                 ElevatedButton(
                   style: const ButtonStyle(),
                   onPressed: () {
@@ -170,7 +170,7 @@ class _SuplemenPageState extends State<SuplemenPage>
                           Image.network(
                             suplemen.gambarsuplemen,
                             width: double.infinity,
-                            height: screenHeight * 0.145,
+                            height: screenHeight * 0.14,
                             fit: BoxFit.cover,
                           ),
                           Padding(
