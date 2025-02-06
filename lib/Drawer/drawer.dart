@@ -1,7 +1,9 @@
 import 'package:basic/Page/Login&Register_page/login_page.dart';
+import 'package:basic/Provider/theme_provider.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:basic/Page/profile_page.dart';
+import 'package:provider/provider.dart';
 
 class Drawerku extends StatefulWidget {
   const Drawerku({super.key, Key});
@@ -27,6 +29,8 @@ class _DrawerkuState extends State<Drawerku> {
 
   @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<ThemeProvider>(context);
+
     return Drawer(
       child: Container(
         padding: const EdgeInsets.fromLTRB(0, 50, 0, 20),
@@ -54,6 +58,10 @@ class _DrawerkuState extends State<Drawerku> {
                   ),
                 );
               },
+            ),
+            ElevatedButton(
+              onPressed: () => themeProvider.toggleTheme(),
+              child: Text("Change Theme"),
             ),
             const Expanded(child: SizedBox()),
             ListTile(

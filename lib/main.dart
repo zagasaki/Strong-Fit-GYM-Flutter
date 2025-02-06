@@ -1,5 +1,6 @@
 import 'package:basic/Page/sign%20up_page.dart';
 import 'package:basic/Provider/MyProvider.dart';
+import 'package:basic/Provider/theme_provider.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:localization/localization.dart';
@@ -14,6 +15,7 @@ Future<void> main() async {
 
   runApp(MultiProvider(providers: [
     ChangeNotifierProvider(create: (_) => DataProfileProvider()),
+    ChangeNotifierProvider(create: (_) => ThemeProvider()),
   ], child: const MyApp()));
 }
 
@@ -22,6 +24,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final themeProvider = Provider.of<ThemeProvider>(context);
     LocalJsonLocalization.delegate.directories = ['lib/i18n'];
     return MaterialApp(
       supportedLocales: const [
@@ -40,11 +43,10 @@ class MyApp extends StatelessWidget {
         return const Locale('en', 'US');
       },
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xffb28242c)),
-        useMaterial3: true,
-      ),
+      title: 'Strongfit Gym',
+      theme: ThemeData.light(),
+      darkTheme: ThemeData.dark(),
+      themeMode: themeProvider.themeMode,
       home: const SignUp(),
     );
   }
