@@ -9,8 +9,7 @@ import 'package:flutter_rating_bar/flutter_rating_bar.dart';
 class SuplemenDetailPage extends StatefulWidget {
   final EventModel suplemen;
 
-  const SuplemenDetailPage({Key? key, required this.suplemen})
-      : super(key: key);
+  const SuplemenDetailPage({super.key, required this.suplemen});
 
   @override
   _SuplemenDetailPageState createState() => _SuplemenDetailPageState();
@@ -19,7 +18,7 @@ class SuplemenDetailPage extends StatefulWidget {
 class _SuplemenDetailPageState extends State<SuplemenDetailPage> {
   int quantity = 1;
   TextEditingController commentController = TextEditingController();
-  double userRating = 0.0; // Default rating value
+  double userRating = 0.0;
   List<Map<String, dynamic>> ratings = [];
 
   Future<void> _addToCart() async {
@@ -173,6 +172,7 @@ class _SuplemenDetailPageState extends State<SuplemenDetailPage> {
     return Scaffold(
       backgroundColor: colorbase,
       appBar: AppBar(
+        iconTheme: IconThemeData(color: Colors.white),
         backgroundColor: colorbase,
         title: Text(
           widget.suplemen.namasuplemen,
